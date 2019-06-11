@@ -9,22 +9,53 @@
 import SwiftUI
 
 struct ContentView : View {
-    var rooms: [Room] = []
+    @ObjectBinding var store = RoomStore()
 
     var body: some View {
         NavigationView {
-            List(rooms) { room in
-                RoomCell(room: room)
+            List {
+                Section {
+                    Button(action: addRoom) {
+                        Text("Add Room")
+                    }
+                }
+                Section {
+                    ForEach(store.rooms) { room in
+                        RoomCell(room: room)
+                    }
+                    .onDelete(perform: delete)
+                    .onMove(perform: move)
+                }
             }
             .navigationBarTitle(Text("Rooms"))
+            .navigationBarItems(trailing: EditButton())
+            .listStyle(.grouped)
         }
+    }
+
+    func addRoom() {
+        store.rooms.append(Room(name: "Hall 2", capacity: 2000))
+    }
+
+    func delete(at offsets: IndexSet) {
+        guard let index = offsets.first else {
+            return
+        }
+        store.rooms.remove(at: index)
+    }
+
+    func move(from source: IndexSet, to destinationIndex: Int) {
+        guard let sourceIndex = source.first else {
+            return
+        }
+        store.rooms.move(from: sourceIndex, to: destinationIndex)
     }
 }
 
 #if DEBUG
 struct ContentView_Previews : PreviewProvider {
     static var previews: some View {
-        ContentView(rooms: testData)
+        ContentView(store: RoomStore(rooms: testData))
     }
 }
 #endif
