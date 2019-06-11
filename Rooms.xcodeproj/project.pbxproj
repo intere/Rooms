@@ -14,6 +14,8 @@
 		36A9312A22AF06880005A1C9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 36A9312922AF06880005A1C9 /* Preview Assets.xcassets */; };
 		36A9312D22AF06880005A1C9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 36A9312B22AF06880005A1C9 /* LaunchScreen.storyboard */; };
 		36A9313822AF06880005A1C9 /* RoomsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A9313722AF06880005A1C9 /* RoomsTests.swift */; };
+		36A9314322AF075E0005A1C9 /* Room.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A9314222AF075E0005A1C9 /* Room.swift */; };
+		36F77A3922AF0D500091509D /* RoomDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F77A3822AF0D500091509D /* RoomDetail.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +40,8 @@
 		36A9313322AF06880005A1C9 /* RoomsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RoomsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		36A9313722AF06880005A1C9 /* RoomsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomsTests.swift; sourceTree = "<group>"; };
 		36A9313922AF06880005A1C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		36A9314222AF075E0005A1C9 /* Room.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Room.swift; sourceTree = "<group>"; };
+		36F77A3822AF0D500091509D /* RoomDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomDetail.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +90,8 @@
 				36A9312B22AF06880005A1C9 /* LaunchScreen.storyboard */,
 				36A9312E22AF06880005A1C9 /* Info.plist */,
 				36A9312822AF06880005A1C9 /* Preview Content */,
+				36A9314222AF075E0005A1C9 /* Room.swift */,
+				36F77A3822AF0D500091509D /* RoomDetail.swift */,
 			);
 			path = Rooms;
 			sourceTree = "<group>";
@@ -208,8 +214,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				36F77A3922AF0D500091509D /* RoomDetail.swift in Sources */,
 				36A9312122AF06870005A1C9 /* AppDelegate.swift in Sources */,
 				36A9312322AF06870005A1C9 /* SceneDelegate.swift in Sources */,
+				36A9314322AF075E0005A1C9 /* Room.swift in Sources */,
 				36A9312522AF06870005A1C9 /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
